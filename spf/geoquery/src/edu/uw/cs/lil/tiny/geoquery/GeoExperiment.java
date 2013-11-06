@@ -197,6 +197,7 @@ public class GeoExperiment extends DistributedExperiment {
 		// Read resources
 		// //////////////////////////////////////////////////
 		
+		System.out.println("-----------------------------");
 		for (final Parameters params : resourceParams) {
 			System.out.println(params);
 			final String type = params.get("type");
