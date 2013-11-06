@@ -1,42 +1,18 @@
 (
 
-capital:<c,t>
-high_point:<e,<e,t>>
-argmax:<<e,t>,<<e,i>,e>>
-city:<c,t>
-the:<<e,t>,e>
-bef:<e,<e,t>>
-size:<lo,i>
-area:<lo,i>
-high_point:<e,l>
-argmin:<<e,t>,<<e,i>,e>>
-population:<lo,i>
-state:<s,t>
-sum:<<e,t>,<<e,i>,i>>
-town:<lo,t>
-lake:<l,t>
-river:<r,t>
-population:<lo,<i,t>>
-forall:<<e,t>,t>
-mountain:<m,t>
-elevation:<lo,i>
-next_to:<lo,<lo,t>>
-place:<p,t>
-=:<i,<i,t>>
-count:<<e,t>,i>
-exists:<<e,t>,t>
-<:<i,<i,t>>
-loc:<lo,<lo,t>>
-elevation:<lo,<i,t>>
-capital2:<s,<c,t>>
-equals:<e,<e,t>>
-density:<lo,i>
-density:<lo,<i,t>>
-named:<e,<n,t>>
->:<i,<i,t>>
-capital:<s,c>
-len:<r,i>
-major:<lo,t>
-in:<lo,<lo,t>>
+// Wrappers
+PRE_STATE_WRAPPER:<a,<t,t>>
+POST_STATE_WRAPPER:<a,<t,t>>
+
+// Common predicates
+exists:<<e,t>,t>				// Existensial quantifier
+exists:<<a,t>,t>				
+eq:<e,<e,t>>
+eq:<a,<a,t>>
+not:<t,t>
+
+// Determiners
+a:<<e,t>,e>			// Indefinite article
+io:<<e,t>,e>		// Definite article
 
 )

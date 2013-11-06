@@ -113,7 +113,7 @@ public class GeoExperiment extends DistributedExperiment {
 		
 		// Init the logical expression type system
 		LogicLanguageServices.setInstance(new LogicLanguageServices.Builder(
-				new TypeRepository(typesFile)).setNumeralTypeName("i")
+				new TypeRepository(typesFile)).setNumeralTypeName("n")
 				.setTypeComparator(new FlexibleTypeComparator()).build());
 		
 		// //////////////////////////////////////////////////
@@ -151,7 +151,11 @@ public class GeoExperiment extends DistributedExperiment {
 		
 		final Set<LogicalConstant> unfactoredConstants = new HashSet<LogicalConstant>();
 		unfactoredConstants.add((LogicalConstant) categoryServices
-				.parseSemantics("the:<<e,t>,e>"));
+				.parseSemantics("io:<<e,t>,e>"));
+		unfactoredConstants.add((LogicalConstant) categoryServices
+				.parseSemantics("a:<<e,t>,e>"));
+		unfactoredConstants.add((LogicalConstant) categoryServices
+				.parseSemantics("eq:<e,<e,t>>"));
 		unfactoredConstants.add((LogicalConstant) categoryServices
 				.parseSemantics("exists:<<e,t>,t>"));
 		FactoredLexiconServices.set(unfactoredConstants);
